@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [PasswordStrengthBarComponent, FormsModule],
   templateUrl: './input-card.component.html',
-  styleUrl: './input-card.component.scss'
 })
 export class InputCardComponent {
   passwordModel: string = '';

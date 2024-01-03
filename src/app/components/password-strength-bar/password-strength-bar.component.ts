@@ -2,15 +2,16 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 
 import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { PasswordStrength, StrengthTypes } from '../../shared/pass.interface';
-import { strengthPasswordCombinations, progressStrengthConfig } from '../../shared/pass-pattern.regex';
+import { PasswordStrength, StrengthTypes } from '../../pass.interface';
+import { strengthPasswordCombinations, progressStrengthConfig } from '../../pass-pattern.regex';
 
 @Component({
   selector: 'app-password-strength-bar',
   standalone: true,
   imports: [NgbProgressbarModule],
-  templateUrl: './password-strength-bar.component.html',
-  styleUrl: './password-strength-bar.component.scss'
+  template: `
+      <ngb-progressbar class="mb-3" [type]="progressType" [value]="progressValue"/>
+  `,
 })
 export class PasswordStrengthBarComponent implements OnInit, OnChanges {
   @Input() password!: string;
