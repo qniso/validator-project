@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3 offset-4 mt-5">
+      <div class="card">
+        <div class="card-body">
+            <div class="form-group mb-2">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                [(ngModel)]="passwordModel"
+              />
+            </div>
+            <app-password-strength-bar [password]="passwordModel"></app-password-strength-bar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
